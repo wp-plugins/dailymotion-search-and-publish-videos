@@ -3,8 +3,8 @@ Contributors: walihassan
 Donate link: http://www.walihassan.com
 Tags: dailymotion, search videos, video posts, publish dailymotion videos, dailymotion api, video blog, video tube
 Requires at least: 3.0.1
-Tested up to: 3.9.1
-Stable tag: trunk
+Tested up to: 4.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,12 @@ No Quesions asked yet. Ask them at www.walihassan.com/contact
 Don't wait for Screenshots. Give it a shot, you'll enjoy.
 
 == Changelog ==
+
+= 1.1 =
+Fixing Bugs 
+- Fixed Recent / Relevant bug
+- Fixed the issue with duplicate posting
+- Fixed few other minor bugs
 
 = 1.0 =
 First Version. 
