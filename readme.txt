@@ -4,7 +4,7 @@ Donate link: http://www.walihassan.com
 Tags: dailymotion, search videos, video posts, publish dailymotion videos, dailymotion api, video blog, video tube
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,29 @@ A video Post will add the following to your post.
 
 Once video is published, you will get a link to EDIT right on plugin dashboard.
 
+----- BIG UPDATE 2.0 -----
+
+Youtube & Vimeo are coming soon. In the mean time enjoy these new features:
+
+Now you can search by user ID and pull upto 200 results at a time.
+You can also add your theme compatible settings in "User Settings" Page. (Please refer to screenshots)
+
+Player Settings:
+Player Width x height
+Syndication Key
+AutoPlay
+
+Video Post Settings:
+Video Embed Custom Field
+Post Format ( video / Standard )
+Post Status ( Publish / Draft )
+You can also add Post Prefix ( Must watch: Exclusive )
+
+Please let me know any other features you would like me to add into this plugin.
+
+Email me at walihassanjafferi@gmail.com 
+
+
 == Installation ==
 
 1. Upload `dsp_plugin.php` to the `/wp-content/plugins/` directory
@@ -44,15 +67,35 @@ No Quesions asked yet. Ask them at www.walihassan.com/contact
 
 == Screenshots ==
 
-Don't wait for Screenshots. Give it a shot, you'll enjoy.
+1. User Settings area to control Post & Player Settings.
+2. DailyMotion Dashboard Control to Search Videos using Keyword & User ID
+3. Publish Video button posts the video right away in your website.
 
 == Changelog ==
 
+= 2.0 =
+
+* Release Date - 30th Jan, 2015
+
+* Youtube & Vimeo coming soon option enabled.
+
+* New Option: Search by User ID option in DailyMotion
+* New Option: Added Total Results selection
+
+* New Option: Added User Settings Page with multiple options
+* New Option: Width & Height settings for Player
+* New Option: Video Embed Custom Field Selection 
+* New Option: Video Post Status Selection ( Publish - Draft )
+* New Option: Video Post Format Selection ( Standard - Video )
+* New Option: Video Player AutoPlay option selection
+* New Option: Syndication Key for Dailymotion
+* New Option: Prefix Video Title Option 
+
 = 1.1 =
-Fixing Bugs 
-- Fixed Recent / Relevant bug
-- Fixed the issue with duplicate posting
-- Fixed few other minor bugs
+* Fixing Bugs 
+* Fixed Recent / Relevant bug
+* Fixed the issue with duplicate posting
+* Fixed few other minor bugs
 
 = 1.0 =
 First Version. 
