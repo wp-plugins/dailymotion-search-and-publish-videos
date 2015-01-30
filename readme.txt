@@ -4,7 +4,7 @@ Donate link: http://www.walihassan.com
 Tags: dailymotion, search videos, video posts, publish dailymotion videos, dailymotion api, video blog, video tube
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 2.0
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,8 +27,6 @@ A video Post will add the following to your post.
 5. Auto Set Post format as Video
 
 Once video is published, you will get a link to EDIT right on plugin dashboard.
-
------ BIG UPDATE 2.0 -----
 
 Youtube & Vimeo are coming soon. In the mean time enjoy these new features:
 

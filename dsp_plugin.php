@@ -3,7 +3,7 @@
  * Plugin Name: DailyMotion Search & Publish Videos
  * Plugin URI: http://www.walihassan.com/contact
  * Description: Searches Dailymotion Videos and publish them as post
- * Version: 2.0
+ * Version: 1.2
  * Author: Wali Hassan
  * Author URI: http://www.walihassan.com
  * License: GPL2
