@@ -230,7 +230,7 @@ if ( ( isset ($_POST['search']) || isset ($_GET['search'])  && $_POST['search'] 
 	<?php }?>
 	</div></div>
 	<?php
-		dsp_info_html();
+		//dsp_info_html();
 		}
 ?>
 </div>
