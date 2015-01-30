@@ -71,7 +71,7 @@ No Quesions asked yet. Ask them at www.walihassan.com/contact
 
 == Changelog ==
 
-= 2.0 =
+= 1.2 =
 
 * Release Date - 30th Jan, 2015
 
