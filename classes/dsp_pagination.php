@@ -1,6 +1,6 @@
 <?php
 
-function dsp_pagination($results, $page, $size, $basequeryurl, $search){
+function dsp_pagination($results, $page, $size, $basequeryurl, $sort, $search, $user, $results){
 	//PAGINATION Starts here
 	echo '<div id="pagination">';
 	
@@ -19,14 +19,14 @@ function dsp_pagination($results, $page, $size, $basequeryurl, $search){
 		$start = ( $end - $range ) > 0 ? ( $end - $range ) : 1;
 	}
 	if( $start > 1 ) {
-		echo '... <a href="' . esc_url( $basequeryurl ) . '&p=1&search='.esc_html( $search ).'" class="paginator">1</a>....';
+		echo '... <a href="' . esc_url( $basequeryurl ) . '&p=1&sort='. esc_html( $sort ). '&search='.esc_html( $search ). '&user='.esc_html( $user ).'&results='.esc_html( $results ).'" class="paginator">1</a>....';
 	}
 	for( $i = $start; $i <= $end; $i++ ) {
 		if( $i == $page ) {
 		// Current page is not clickable and different from other pages
 			echo '<a href="" class="active">' . intval( $i ) . '</a>&nbsp;&nbsp;';		
 		} else {
-			$url = add_query_arg( 'p', intval( $i ), $basequeryurl.'&search='.esc_html( $search ) );
+			$url = add_query_arg( 'p', intval( $i ), $basequeryurl.'&sort='. esc_html( $sort ). '&search='.esc_html( $search ). '&user='.esc_html( $user ). '&results='.esc_html( $results ) );
 			echo '<a href="' . esc_url( $url ) . '" class="paginator">' . intval( $i ) . '</a>&nbsp;&nbsp;';
 			}
 		}
@@ -37,5 +37,6 @@ function dsp_pagination($results, $page, $size, $basequeryurl, $search){
 		echo '</div>';
 		
 	}
+	echo '</div>';
 	//PAGINATION Ends here
 }
