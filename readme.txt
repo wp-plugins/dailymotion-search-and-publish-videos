@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== DailyMotion Search and Publish Videos ===
 Contributors: walihassan
 Donate link: http://www.walihassan.com
 Tags: dailymotion, search videos, video posts, publish dailymotion videos, dailymotion api, video blog, video tube
