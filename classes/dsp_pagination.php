@@ -1,17 +1,13 @@
 <?php
-
 function dsp_pagination($results, $page, $size, $basequeryurl, $sort, $search, $user, $results){
 	//PAGINATION Starts here
 	echo '<div id="pagination">';
-	
 	$total = $results;
 	$total_pages = ceil( $total / $size );
-	
 	echo "<strong>Total Records:  " . intval( $total ) . "</strong> | ";
 	// 5 pages on the left and 5 pages on the right of current page
 	$grace = 5;
 	$range = $grace * 2;
-	
 	$start  = ( $page - $grace ) > 0 ? ( $page - $grace ) : 1;
 	$end = $start + $range;
 	if( $end > $total_pages ) {
@@ -33,9 +29,7 @@ function dsp_pagination($results, $page, $size, $basequeryurl, $sort, $search, $
 	if( $end < $total_pages ) {
 		$url = add_query_arg( 'p', intval( $total_pages ), $total_pages );
 		echo '... <a href="' . esc_url( $url ) . '" class="paginator">' . intval( $total_pages ) . '</a>';
-
 		echo '</div>';
-		
 	}
 	echo '</div>';
 	//PAGINATION Ends here
