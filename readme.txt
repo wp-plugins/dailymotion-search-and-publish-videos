@@ -70,7 +70,7 @@ No Quesions asked yet. Ask them at www.walihassan.com/contact
 3. Publish Video button posts the video right away in your website.
 
 == Changelog ==
-= 2.5.2 =
+= 2.6.1 =
 
 * Ajax Functionality for Categories
 
