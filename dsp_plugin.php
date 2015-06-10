@@ -3,7 +3,7 @@
  * Plugin Name: DailyMotion Search & Publish
  * Plugin URI: http://www.walihassan.com
  * Description: Searche Your Favourite Dailymotion Videos and Publish them as post just with one click
- * Version: 2.5.1
+ * Version: 2.6.1
  * Author: Wali Hassan
  * Author URI: http://www.walihassan.com
  * License: GPL2
