@@ -33,16 +33,16 @@ Youtube & Vimeo are coming soon. In the mean time enjoy these new features:
 Now you can search by user ID and pull upto 200 results at a time.
 You can also add your theme compatible settings in "User Settings" Page. (Please refer to screenshots)
 
-Player Settings:
-Player Width x height
-Syndication Key
-AutoPlay
+* Player Settings:
+* Player Width x height
+* Syndication Key
+* AutoPlay
 
 Video Post Settings:
-Video Embed Custom Field
-Post Format ( video / Standard )
-Post Status ( Publish / Draft )
-You can also add Post Prefix ( Must watch: Exclusive )
+* Video Embed Custom Field
+* Post Format ( video / Standard )
+* Post Status ( Publish / Draft )
+* You can also add Post Prefix ( Must watch: Exclusive )
 
 Please let me know any other features you would like me to add into this plugin.
 
