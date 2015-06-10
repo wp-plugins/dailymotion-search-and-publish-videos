@@ -3,8 +3,8 @@ Contributors: walihassan
 Donate link: http://www.walihassan.com
 Tags: dailymotion, search videos, video posts, publish dailymotion videos, dailymotion api, video blog, video tube
 Requires at least: 3.0.1
-Tested up to: 4.1
-Stable tag: 2.5.1
+Tested up to: 4.2.2
+Stable tag: 2.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,11 @@ No Quesions asked yet. Ask them at www.walihassan.com/contact
 3. Publish Video button posts the video right away in your website.
 
 == Changelog ==
+= 2.5.2 =
+
+* Ajax Functionality for Categories
+
+* Ajax Functionality for Publishing Posts
 
 = 2.5.1 =
 

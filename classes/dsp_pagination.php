@@ -1,5 +1,5 @@
 <?php
-function dsp_pagination($results, $page, $size, $basequeryurl, $sort, $search, $user, $results){
+function dsp_pagination($page, $size, $basequeryurl, $sort, $search, $user, $results){
 	//PAGINATION Starts here
 	echo '<div id="pagination">';
 	$total = $results;
@@ -20,17 +20,27 @@ function dsp_pagination($results, $page, $size, $basequeryurl, $sort, $search, $
 	for( $i = $start; $i <= $end; $i++ ) {
 		if( $i == $page ) {
 		// Current page is not clickable and different from other pages
-			echo '<a href="" class="active">' . intval( $i ) . '</a>&nbsp;&nbsp;';		
+			echo '<a onclick="pagination_ajax();return false;"  href="" class="active">' . intval( $i ) . '</a>&nbsp;&nbsp;';		
 		} else {
 			$url = add_query_arg( 'p', intval( $i ), $basequeryurl.'&sort='. esc_html( $sort ). '&search='.esc_html( $search ). '&user='.esc_html( $user ). '&results='.esc_html( $results ) );
-			echo '<a href="' . esc_url( $url ) . '" class="paginator">' . intval( $i ) . '</a>&nbsp;&nbsp;';
+			echo '<a onclick="pagination_ajax();return false;" href="' . esc_url( $url ) . '" class="paginator">' . intval( $i ) . '</a>&nbsp;&nbsp;';
 			}
 		}
 	if( $end < $total_pages ) {
 		$url = add_query_arg( 'p', intval( $total_pages ), $total_pages );
-		echo '... <a href="' . esc_url( $url ) . '" class="paginator">' . intval( $total_pages ) . '</a>';
+		echo '... <a onclick=pagination_ajax();return false;"  href="' . esc_url( $url ) . '" class="paginator">' . intval( $total_pages ) . '</a>';
 		echo '</div>';
 	}
 	echo '</div>';
 	//PAGINATION Ends here
+}
+
+function pagination_ajax(){
+	$search= $_POST['search'];
+	$basequeryurl='admin.php?page=dsp_dashboard';
+	$size='10';
+	$page=$_POST['p'];
+	$user=$_POST['user'];
+	video_table($search, $basequeryurl='', $size='', $page='', $user='');
+	die();
 }

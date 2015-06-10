@@ -24,6 +24,8 @@ class DSP_Plugin_Class {
 		add_action('admin_menu', array ($this, 'dsp_create_menu') );		
 		add_action('wp_ajax_category_select_action', 'implement_ajax');
 		add_action('wp_ajax_category_select_action2', 'implement_ajax_2');
+		add_action('wp_ajax_publish_video', 'implement_ajax_video');
+		add_action('wp_ajax_pagination', 'pagination_ajax');
 		add_action('wp_ajax_nopriv_category_select_action', 'implement_ajax');
 		add_action('wp_ajax_nopriv_category_select_action2', 'implement_ajax_2');
 	}
