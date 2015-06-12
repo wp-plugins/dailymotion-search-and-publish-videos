@@ -4,7 +4,7 @@ Donate link: http://www.walihassan.com
 Tags: dailymotion, search videos, video posts, publish dailymotion videos, dailymotion api, video blog, video tube
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 2.6.1
+Stable tag: 2.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,7 @@ You can also add your theme compatible settings in "User Settings" Page. (Please
 * AutoPlay
 
 Video Post Settings:
+
 * Video Embed Custom Field
 * Post Format ( video / Standard )
 * Post Status ( Publish / Draft )
@@ -70,6 +71,14 @@ No Quesions asked yet. Ask them at www.walihassan.com/contact
 3. Publish Video button posts the video right away in your website.
 
 == Changelog ==
+
+= 2.6.2 =
+* Fixing [radio] bug
+
+* Adding fallback to CURL for shared hosting that block allow_url_fopen
+
+* other fixes
+
 = 2.6.1 =
 
 * Ajax Functionality for Categories

@@ -2,8 +2,7 @@
 	float: right; 
 	width: 100%; 
 	text-align: right;
-	margin: 10px !important;
-	
+	margin: 10px !important;	
 }
 #pagination a{
 	border:solid 1px #9aafe5;
@@ -47,21 +46,15 @@
 	color: #2e6ab1;
 }
 #parent_cat_div, #sub_cat_div, #sub_child_div {
-	float:left !important;
-}
-#parent_cat_div {
-	margin-left:22% !important;
+	display:inline-block !important;
 }
 #category_source p.submit {
 	text-align:center !important;
 }
 #video_source{
-    background: none repeat scroll 0 0 #000080;
-    
-	color: white !important;
-       
+    background: none repeat scroll 0 0 #000080;    
+	color: white !important;       
 	text-align: center;
-	
 }
 #published_cat {
 	background:url('bg.jpg');
@@ -127,9 +120,6 @@ h3.dsp_step  {
     background:none repeat scroll 0 0 #778899;
     padding: 5px;
     text-align: center;
-}
-.categories {
-	float:left;
 }
 #dsp_main_wrap table {
 	width:100%;

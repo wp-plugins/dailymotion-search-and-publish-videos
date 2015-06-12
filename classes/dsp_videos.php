@@ -38,13 +38,13 @@ if ( $video_source == 'dailymotion' ) {
     <?php do_settings_sections( 'dsp-settings-group' ); 
 	$selected="";?>
 	<div id="spinner"><img src="<?php echo DSP_PLUGIN_IMAGES_DIR. 'load-indicator.gif';?>" alt="Loading..."/></div>
-	<div id="parent_cat_div" style="float:left"><?php wp_dropdown_categories("show_option_none=Select parent category&orderby=name&depth=1&hierarchical=1&id=parent_cat&hide_empty=0"); ?></div>
-	<div id="sub_cat_div" style="float:left"><select name="sub_cat_disabled" id="sub_cat_disabled" disabled="disabled"><option>Select parent category first!</option></select></div>
+	<div id="parent_cat_div"><?php wp_dropdown_categories("show_option_none=Select parent category&orderby=name&depth=1&hierarchical=1&id=parent_cat&hide_empty=0"); ?></div>
+	<div id="sub_cat_div"><select name="sub_cat_disabled" id="sub_cat_disabled" disabled="disabled"><option>Select parent category first!</option></select></div>
 	<div id="sub_child_div" ><select name="sub_child_disabled" id="sub_child_disabled" disabled="disabled"><option>Select Child category first!</option></select></div>
 		<input class="button-primary categories" type="submit" name="submit" value="Save Categories">
 	<br /><br />
 	<div id="published_cat">
-	<h3>Videos will be posted to the following category + sub-categories</h3>
+	<h3>Your Videos will be posted to the following categories</h3>
 		<input type="hidden" id="parent_cat_id_hidden" name="parent_cat_id_hidden" value="<?php echo get_option('parent_cat_id_hidden'); ?>">
 		Main Category:<input type="text" id="parent_cat_name" value="<?php  echo get_cat_name(get_option('parent_cat_id_hidden')); ?>">
 		<input type="hidden" id="child_cat_id_hidden"  name="child_cat_id_hidden" value="<?php echo get_option('child_cat_id_hidden'); ?>">
@@ -62,17 +62,17 @@ if ( $video_source == 'dailymotion' ) {
 <h1 class="dsp_step"> Step 3 </h1>
 	<h3 class="dsp_step">Daily<em>motion</em> Search Videos</h3>
 	<form method="POST">
-		Search Keyword: <input type="text" name="search" value="<?php echo ( $_POST['search'] ? $_POST['search'] : $_GET['search'] ); ?>">
+		Keyword: <input type="text" name="search" value="<?php echo ( $_POST['search'] ? $_POST['search'] : $_GET['search'] ); ?>">
 		Sort: <select name="sort">
 		<?php $sort_selected = $_POST['sort'] ? $_POST['sort'] : $_GET['sort']; ?>
 		<option name="relevance" value="relevance"<?php if ( $sort_selected == 'relevance') echo 'selected'; ?> >relevance</option>
 		<option name="recent" value="recent"<?php if ( $sort_selected == 'recent') echo 'selected'; ?> >recent</option>
 		</select>
-		Total Results: <select name="results">
+		Total: <select name="results">
 		<option name="100" value="100"<?php if ( $sort_selected == '100') echo 'selected'; ?> >100</option>
 		<option name="200" value="200"<?php if ( $sort_selected == '200') echo 'selected'; ?> >200</option>
 		</select>
-		Search by User ID: <input type="text" name="user" value="<?php echo ( $_POST['user'] ? $_POST['user'] : $_GET['user'] ); ?>">
+		User ID: <input type="text" name="user" value="<?php echo ( $_POST['user'] ? $_POST['user'] : $_GET['user'] ); ?>">
 		<input class="button-primary" type="submit" name="submit" value="GO!">
 	</form>
 </div>
@@ -112,29 +112,46 @@ function dsp_info_html(){
 
 
 function video_table($search, $basequeryurl='', $size='', $page='', $user=''){
-if ( ( isset ($_POST['search']) || isset ($_GET['search'])  && $_POST['search'] !== '' ) || ( isset ($_POST['user']) || isset ($_GET['user'])  && $_POST['user'] !== '' ) ) {
-	$search = $_POST['search'] ? $_POST['search'] : $_GET['search'] ;
-	$user = $_POST['user'] ? $_POST['user'] : $_GET['user'] ;
-	$sort = $_POST['sort'] ? $_POST['sort']  : $_GET['sort'];
-	$size = 10;
-	$page = isset( $_GET['p'] ) ? intval( $_GET['p'] ) : isset ( $_POST['p']) ? intval ($_POST['p']): 1 ;
-	$search = str_replace(' ', '+', $search);
-	$from = $size * ( $page - 1 );
-	if ( $search && !$user) {	
-	$url="https://api.dailymotion.com/videos?search=".esc_html( $search ).
-	"&fields=id,owner,title,url,views_total,owner.username,owner.screenname,duration,updated_time,thumbnail_180_url,thumbnail_url&language=en&sort=".esc_html( $sort )."&page=".esc_html( $page )."";
-	}else if ( $user && !$search ) {
-	$url="https://api.dailymotion.com/user/".esc_html( $user ).
-	"/videos?fields=id,owner,title,url,views_total,owner.username,owner.screenname,duration,updated_time,thumbnail_180_url,thumbnail_url&language=en&sort=recent&page=".esc_html( $page )."";;
-	}else if ( $user && $search) {
-	$url="https://api.dailymotion.com/user/".esc_html( $user )."/videos?search=".esc_html( $search ).
-	"&fields=id,owner,title,url,views_total,owner.username,owner.screenname,duration,updated_time,thumbnail_180_url,thumbnail_url&language=en&sort=".esc_html( $sort )."&page=".esc_html( $page )."";;
-	}
-	//print_r ($url);
-	$json = file_get_contents ( $url, true );
-	$content = json_decode($json, true);
-	//var_dump ( $content );
 
+	if ( ( isset ($_POST['search']) || isset ($_GET['search'])  && $_POST['search'] !== '' ) || ( isset ($_POST['user']) || isset ($_GET['user'])  && $_POST['user'] !== '' ) ) {
+	
+		$search = $_POST['search'] ? $_POST['search'] : $_GET['search'] ;
+		$user = $_POST['user'] ? $_POST['user'] : $_GET['user'] ;
+		$sort = $_POST['sort'] ? $_POST['sort']  : $_GET['sort'];
+		$size = 10;
+		$page = isset( $_GET['p'] ) ? intval( $_GET['p'] ) : isset ( $_POST['p']) ? intval ($_POST['p']): 1 ;
+		$search = str_replace(' ', '+', $search);
+		$from = $size * ( $page - 1 );
+	
+		if ( $search && !$user) {	
+			$url="https://api.dailymotion.com/videos?search=".esc_html( $search ).
+			"&fields=id,owner,title,url,views_total,owner.username,owner.screenname,duration,updated_time,thumbnail_180_url,thumbnail_url&language=en&sort=".esc_html( $sort )."&page=".esc_html( $page )."";
+		}else if ( $user && !$search ) {
+			$url="https://api.dailymotion.com/user/".esc_html( $user ).
+			"/videos?fields=id,owner,title,url,views_total,owner.username,owner.screenname,duration,updated_time,thumbnail_180_url,thumbnail_url&language=en&sort=recent&page=".esc_html( $page )."";;
+		}else if ( $user && $search) {
+			$url="https://api.dailymotion.com/user/".esc_html( $user )."/videos?search=".esc_html( $search ).
+			"&fields=id,owner,title,url,views_total,owner.username,owner.screenname,duration,updated_time,thumbnail_180_url,thumbnail_url&language=en&sort=".esc_html( $sort )."&page=".esc_html( $page )."";;
+		}
+	//print_r ($url);
+	if ($url) 
+		
+		//Checking if file_get_contents fails for any reason then move to CURL
+		
+		if ( ini_get('allow_url_fopen') ){
+			$json = file_get_contents ( $url, true );
+		}else{ 
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_URL,$url);
+			$json=curl_exec($ch);
+		}
+	
+	if ( $json ) {
+		
+	$content = json_decode($json, true);
+	//var_dump ( $content );	
 	echo "<br/><table id='publish_table' border='1' width='100%'>";
 	echo "<tr>";
 	echo "<th>Video</th>";
@@ -199,11 +216,13 @@ if ( ( isset ($_POST['search']) || isset ($_GET['search'])  && $_POST['search'] 
 	}
 		dsp_pagination($page, $size, $basequeryurl, $sort, $search, $user, $results);
 			echo "</table>";
-		dsp_pagination($page, $size, $basequeryurl, $sort, $search, $user, $results);
+		dsp_pagination($page, $size, $basequeryurl, $sort, $search, $user, $results); 
+		}else{
+			echo "<br /><div class=\"error\" style='text-align:center;margin:5px 2px;'><h2>I tried so much .. and you still managed to break it?  what did you do? Huh?</h2></div>";
+		}
 	} elseif ( ( isset ($_POST['user']) && $_POST['user'] === '') && ( isset ($_POST['search']) && $_POST['search'] === '') )  {
 		echo "<div class=\"error\" style='text-align:left;margin:5px 0 2px;'><h2>Please type a search keyword</h2></div>";
 	} else {
 	echo "<div class=\"error\" style='text-align:center;margin:5px 0 2px;'><h2>Please start by typing a search keyword above!</h2></div>";
 	}
 }
-

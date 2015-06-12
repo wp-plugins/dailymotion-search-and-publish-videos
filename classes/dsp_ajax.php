@@ -45,8 +45,8 @@ if ( $_POST['publishAction'] == 'publish' ){
 	$dsp_video_height = get_option('dsp_video_height') ? get_option('dsp_video_height') : '480';
 	$dsp_syndication_key = get_option('dsp_syndication_key') ? get_option('dsp_syndication_key') : '';
 	$dsp_video_autoplay = get_option('dsp_video_autoplay') ? get_option('dsp_video_autoplay') : '1' ;
-	$dsp_video_post_format = get_option('dsp_video_post_format') ? get_option('dsp_video_post_format')['radio'] : 'video' ;
-	$dsp_video_post_status = get_option('dsp_video_post_status') ? get_option('dsp_video_post_status')['radio'] : 'publish' ;
+	$dsp_video_post_format = get_option('dsp_video_post_format') ? get_option('dsp_video_post_format') : 'video' ;
+	$dsp_video_post_status = get_option('dsp_video_post_status') ? get_option('dsp_video_post_status') : 'publish' ;
 	$dsp_custom_field_video_embed = get_option('dsp_custom_field_video_embed');
 	$video_embed_code = '<iframe frameborder="0" width="'.esc_html( $dsp_video_width ).'" height="'.esc_html( $dsp_video_height ).'" src="http://www.dailymotion.com/embed/video/'.esc_html( $post_entry_id ).'?autoplay='.intval( $dsp_video_autoplay ).'&logo=0&hideInfos=1&syndication='.intval( $dsp_syndication_key ).'"></iframe>';
 	$post_content = $dsp_custom_field_video_embed ? '' : $video_embed_code;
@@ -100,5 +100,5 @@ if ( $_POST['publishAction'] == 'publish' ){
 		echo "</div><hr />";
 	}
 }
-die();
+	die();
 }
