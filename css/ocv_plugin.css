@@ -1,0 +1,242 @@
+#pagination {
+	float: right; 
+	width: 100%; 
+	text-align: right;
+	margin: 10px !important;	
+}
+#pagination a{
+	border:solid 1px #9aafe5;
+	margin-right:2px;
+}
+#pagination a:hover{
+	border:solid 1px #0e509e;
+	background:#2e6ab1;
+	color:white;
+}
+#pagination a:link,
+#pagination a:visited {
+	color:#0e509e
+	display:block;
+	padding:3px 6px;
+	text-decoration:none;
+}
+#pagination .previous-off,
+#pagination .next-off {
+	border:solid 1px #DEDEDE
+	color:#888888
+	display:block;
+	font-weight:bold;
+	margin-right:2px;
+	padding:3px 4px;
+}
+#pagination .next a,
+#pagination .previous a {
+	font-weight:bold;
+}
+#pagination .active{
+	font-weight:bold;
+	background:#2e6ab1;
+	color:white;
+	padding:3px 6px;
+}
+#pagination strong{
+	margin-right:20px;
+	font-size:14px;
+	font-style:italic;
+	color: #2e6ab1;
+}
+#parent_cat_div, #sub_cat_div, #sub_child_div {
+	display:inline-block !important;
+}
+#category_source p.submit {
+	text-align:center !important;
+}
+#video_source{
+    background: none repeat scroll 0 0 #000080;    
+	color: white !important;       
+	text-align: center;
+}
+#published_cat {
+	background:#fff;
+	padding:10px;
+	border-top:1px solid #ddd;
+}
+#ocv_wrapper { 
+	color: white !important;       
+	text-align: center!important;	
+	padding:5px!important;	
+	margin-bottom:10px;	
+}
+#ocv_main_wrap {
+	width:99%;
+}
+
+#ocv_page_wrap {
+	float:left;
+	width:100%;
+	position:relative;
+}
+#ocv_main_settings, #ocv_dm_wrap_user, #ocv_yt_wrap_user, #ocv_vm_wrap_user{
+	float:left;
+	width:70%;
+	position:relative;
+	background:#fff;
+	padding:20px;
+	margin-top:10px;
+	
+}
+
+#ocv_footer_section {
+	background:#fff !important;
+	float:left;
+	width:20%;
+	margin:10px;
+	padding-top:0px !important;
+	padding:10px;
+	position:relative;
+	left:1% !important;
+	
+}
+h1.ocv_step  {
+    font-family: sans-serif !important;
+    font-size: 40px !important;	
+	color:#fff !important;	
+	padding:5px;	
+	clear:both;
+}
+h3.ocv_step  {
+    font-family: sans-serif !important;
+    color:#000;
+	clear:both;	
+}
+#ocv_wrapper h3.ocv_step {
+	color:#fff !important;
+}
+#category_source {
+    background:#fff;
+    padding: 5px;
+    text-align: center;
+	margin-top:10px;
+	border:1px solid #000;
+}
+#ocv_main_wrap table {
+	width:100%;
+	background:#fff;
+}
+.ocv_heading {
+	background: #0088dd; /* Old browsers */
+	background: -moz-linear-gradient(left,  #0088dd 0%, #ddf1f9 83%, #feffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0088dd), color-stop(83%,#ddf1f9), color-stop(100%,#feffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #0088dd 0%,#ddf1f9 83%,#feffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #0088dd 0%,#ddf1f9 83%,#feffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #0088dd 0%,#ddf1f9 83%,#feffff 100%); /* IE10+ */
+	background: linear-gradient(to right,  #0088dd 0%,#ddf1f9 83%,#feffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088dd', endColorstr='#feffff',GradientType=1 ); /* IE6-9 */
+	color:#fff;
+	padding:10px;
+	width:200px;	
+}
+div#spinner{
+    display: none;
+    width:300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align:center;
+    z-index:100;
+    overflow: hidden;
+}  
+#ui-id-1 {
+    background: #27a1ca;
+    color: white;
+	text-align:center;
+
+}  
+#ui-id-2 {
+    background: #0066dc;
+    color: white;
+	text-align:center;
+}
+#ui-id-3 {
+    background: #e62117;
+    color: white;
+	text-align:center;
+}
+
+#ui-id-4 {
+    background: #4bf;
+    color: white;
+	text-align:center;
+}
+.youtube_3 {
+	background:#e62117 !important;
+}
+.dailymotion_3 {
+	background:#0066dc !important;
+}
+.vimeo_3 {
+	background:#4bf !important;
+}
+.ocv_icon {
+    font-size: 35px !important;
+}
+.ui-tabs-active,.ui-state-active,.ui-tabs-anchor:hover, .ui-state-hover {
+	cursor:pointer !important;
+	background: rgba(255,255,255,0.4) !important;
+}
+
+#ocv_user-tabs .ui-tabs-nav li {
+	border:0px !important;
+	padding:0px !important;
+	margin:0px !important;
+}
+.ui-widget-header {
+	background:#27a1ca !important;
+border:0px !important;
+margin:0px !important;
+padding:0px !important;
+	}
+
+
+.ocv_title {
+    background: black none repeat scroll 0 0;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+    padding-top: 4px;
+}
+.ocv_title_icon {
+    background: #27a1ca none repeat scroll 0 0;
+    color: #fff;
+    font-size: 30px !important;
+    line-height: 52px !important;
+    margin: 0 5px 0 0;
+    padding: 5px 16px;
+    text-align: center;
+    width: 30px;
+}
+#ajax_description {
+	display:none !important;
+}
+#publish_table_wrapper .dataTables_paginate {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 4px;
+}
+#publish_table_wrapper th {
+	padding:5px !important;
+}
+#publish_table_wrapper td{
+	text-align:center;
+}
+
+.ocv_title_text {
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    text-align:right;
+}
+.ocv_title_text a {
+	color:#fff !important;
+}
