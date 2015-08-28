@@ -1,20 +1,25 @@
 === DailyMotion Search and Publish Videos ===
 Contributors: walihassan
 Donate link: http://www.walihassan.com
-Tags: dailymotion, search videos, video posts, publish dailymotion videos, dailymotion api, video blog, video tube
+Tags: dailymotion, search videos, video posts, publish dailymotion videos, dailymotion api, video blog, video tube, youtube, vimeo, auto post, video blog, video tube, dailymotion auto post
 Requires at least: 3.0.1
-Tested up to: 4.2.2
-Stable tag: 2.6.2
+Tested up to: 4.3
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Search any Dailymotion videos and publish them with just one click on your website as video post.
+Search any Dailymotion, Youtube & Vimeo videos and publish them with just one click on your website as video post.
 
 == Description ==
 
-This is a standalone plugin that offers Dailymotion Video Search right from your Wordpress Dashboard.
+> <strong>Premium VERSION Launched</strong><br>
+> A premium version of this pulgin is launched with name "One Click Videos Plugin for Wordpress" and can be purchased from CodeCanyon here [One Click Videos Plugin](http://codecanyon.net/item/one-click-videos-for-wordpress/12645824) only.
+> Note that the Premium plugin has Youtube, Vimeo and several extra features too so it might be well worth your investment!
+> You can see the Plugin Demo Site here [Plugin Demo Site](http://oneclickvideos.ropstam.com/).
 
-You can use any search keyword and search either Recent or Relevant videos from Dailymotion.
+This is a standalone plugin that offers 1000s of Video Search right from your Wordpress Dashboard.
+
+You can use any search keyword and search either Recent or Relevant videos from Dailymotion, Youtube & Vimeo.
 
 This plugin will automatically pull your categories upto 3 levels. You can then save Videos in these categories.
 
@@ -28,9 +33,7 @@ A video Post will add the following to your post.
 
 Once video is published, you will get a link to EDIT right on plugin dashboard.
 
-Youtube & Vimeo are coming soon. In the mean time enjoy these new features:
-
-Now you can search by user ID and pull upto 200 results at a time.
+Now you can search by user ID and pull upto 100 results at a time.
 You can also add your theme compatible settings in "User Settings" Page. (Please refer to screenshots)
 
 * Player Settings:
@@ -54,10 +57,10 @@ Email me at walihassanjafferi@gmail.com
 
 1. Upload `dsp_plugin.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Once activated, go to Wordpress Dashboard > DSP Videos 
-4. Select upto 3 level of categories where you want to save videos
-5. Search for videos , select recent or relevant
-6. Click PUBLISH if you want to post a video on your blog.
+3. Once activated, go to Wordpress Dashboard > One Click Videos
+4. Setup the User Settings area for Theme, Dailymotion, Youtube and Vimeo
+5. Go to DailyMotion Videos page and Search for videos , select recent or relevant
+6. Click PUBLISH to post a video on your blog right away.
 
 == Frequently Asked Questions ==
 
@@ -66,11 +69,28 @@ No Quesions asked yet. Ask them at www.walihassan.com/contact
 
 == Screenshots ==
 
-1. User Settings area to control Post & Player Settings.
-2. DailyMotion Dashboard Control to Search Videos using Keyword & User ID
-3. Publish Video button posts the video right away in your website.
+1. Theme Related Settings and Post Prefix & Description settings.
+2. DailyMotion User & Player Settings
+3. Youtube User & Player Settings
+4. Vimeo User & Player Settings
+5. Multiple Category Selection Settings
+3. Search and then use Publish Video button to post the video right away in your website.
 
 == Changelog ==
+
+= 3.0 =
+
+* Lots of new features Added
+
+* jQuery data tables and pagination
+
+* Ajaxified search results
+
+* Ajaxified posting
+
+* Youtube & Vimeo Premium Ad ons.
+
+* Lots of bugs fixed
 
 = 2.6.2 =
 * Fixing [radio] bug
